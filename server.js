@@ -43,6 +43,10 @@ mongoose
     "mongodb+srv://debjitdolui04:CdXbKyru0soT03ZZ@cluster0.jlrd74y.mongodb.net/",
     {
       dbName: "MERN_E_Commerce",
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 10000, // 10 seconds
+      socketTimeoutMS: 45000, // 45 seconds
     }
   )
   .then(() => console.log("MongoDB Connected Successfully...!"))
