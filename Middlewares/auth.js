@@ -10,7 +10,7 @@ export const Authenticated = async (req, res, next) => {
           const id = decoded.userId;
 
           let user = await User.findById(id);
-          console.log(decoded);
+          //console.log(decoded);
           if (!user) return res.json({ message: "User not exist" });
 
           req.user = user;

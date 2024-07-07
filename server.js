@@ -4,7 +4,7 @@ import userRouter from "./Routes/user.js";
 import productRouter from "./Routes/product.js";
 import cartRouter from "./Routes/cart.js";
 import addressRouter from "./Routes/address.js"
-import paymentRouter from "./Routes/pyament.js"
+import paymentRouter from "./Routes/payment.js"
 import bodyParser from "express";
 import cors from 'cors'
 
