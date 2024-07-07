@@ -40,7 +40,7 @@ app.use('/api/payment',paymentRouter)
 
 mongoose
   .connect(
-    "mongodb+srv://debjitdolui04:CdXbKyru0soT03ZZ@cluster0.jlrd74y.mongodb.net/",
+    "mongodb+srv://user01:User01@cluster0.jlrd74y.mongodb.net/",
     {
       dbName: "MERN_E_Commerce",
       useNewUrlParser: true,
