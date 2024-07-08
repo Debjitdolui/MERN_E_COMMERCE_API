@@ -7,11 +7,13 @@ import addressRouter from "./Routes/address.js"
 import paymentRouter from "./Routes/payment.js"
 import bodyParser from "express";
 import cors from 'cors'
+import dotenv from 'dotenv'
+dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json());
-const port = 1000;
+
 
 app.use(cors({
   origin: true,
@@ -37,16 +39,19 @@ app.use('/api/address', addressRouter)
 
 //payment Router
 app.use('/api/payment',paymentRouter)
-
+ 
+const url = process.env.URI;
 mongoose
   .connect(
-    "mongodb+srv://debjitdolui04:CdXbKyru0soT03ZZ@cluster0.jlrd74y.mongodb.net/",
+    url,
     {
       dbName: "MERN_E_Commerce",
     }
   )
   .then(() => console.log("MongoDB Connected Successfully...!"))
   .catch((err) => console.log(err));
+
+const port = process.env.PORT ;
 
 app.listen(port, () => {
   console.log("server started");
